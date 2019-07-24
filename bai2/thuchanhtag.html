@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="soThuNhat" id="soThuNhat" />
+    <input type="text" nam="soThuHai" id="soThuHai">
+
+    <button type="button" onclick="congHaiSo();">Cong</button>
+    <button type="button" onclick="truHaiSo();">Tru</button>
+    <button type="button" onclick="nhanHaiSo();">Nhan</button>
+    <button type="button" onclick="chiaHaiSo();">Chia</button>
+
+    <p id="xuat"></p>
+</button>    
+<script>
+    function congHaiSo (){
+        var soThuNhat = document.getElementById("soThuNhat").value;
+        var soThuHai = document.getElementById("soThuHai").value;
+        document.getElementById("xuat").innerHTML = +soThuNhat + +soThuHai;
+    }
+
+    function truHaiSo (){
+        var soThuNhat = document.getElementById("soThuNhat").value;
+        var soThuHai = document.getElementById("soThuHai").value;
+        document.getElementById("xuat").innerHTML = +soThuNhat - +soThuHai;
+    }
+
+    function nhanHaiSo (){
+        var soThuNhat = document.getElementById("soThuNhat").value;
+        var soThuHai = document.getElementById("soThuHai").value;
+        document.getElementById("xuat").innerHTML = +soThuNhat * +soThuHai;
+    }
+
+    function chiaHaiSo (){
+        var soThuNhat = document.getElementById("soThuNhat").value;
+        var soThuHai = document.getElementById("soThuHai").value;
+        document.getElementById("xuat").innerHTML = +soThuNhat / +soThuHai;
+    }
+
+    </script>
+
+
+
+
+    </body>
+</html>

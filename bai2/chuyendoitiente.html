@@ -21,10 +21,10 @@
                 <option value="vn">Viet Nam</option>
             </select>
             <button type="button" onclick="myFunction();">Convert</button>
-            <p id="xuat">Xuat</p>
+            <p id="xuat"></p>
         </form>
         <script>
-            function myFunction() { debugger;
+            function myFunction() {
                 var amount = document.getElementById("amount").value;
                 var fromCurrency = document.getElementById("fromCurrency").value;
                 var toCurrency = document.getElementById("toCurrency").value;
@@ -32,7 +32,7 @@
                     document.getElementById("xuat").innerHTML = amount;
                 } else if (fromCurrency !== toCurrency && fromCurrency === 'vn') {
                     document.getElementById("xuat").innerHTML = +amount * 0.00004348;
-                } else {
+                } else { 
                     document.getElementById("xuat").innerHTML = +amount * 23000;
                 }
             }
