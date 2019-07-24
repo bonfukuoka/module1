@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <form>
+            <label>Amount</label>
+            <input type="text" name="amount" id="amount">
+            <label for="">From Currency</label>
+            <select name="fromCurrency" id="fromCurrency">
+                <option value="vn">Viet Nam</option>
+                <option value="usd">USD</option>
+            </select>
+            <label>To Currency</label>
+            <select name="toCurrency" id="toCurrency">
+                <option value="usd">USD</option>
+                <option value="vn">Viet Nam</option>
+            </select>
+            <button type="button" onclick="myFunction();">Convert</button>
+            <p id="xuat">Xuat</p>
+        </form>
+        <script>
+            function myFunction() { debugger;
+                var amount = document.getElementById("amount").value;
+                var fromCurrency = document.getElementById("fromCurrency").value;
+                var toCurrency = document.getElementById("toCurrency").value;
+                if (fromCurrency === toCurrency) {
+                    document.getElementById("xuat").innerHTML = amount;
+                } else if (fromCurrency !== toCurrency && fromCurrency === 'vn') {
+                    document.getElementById("xuat").innerHTML = +amount * 0.00004348;
+                } else {
+                    document.getElementById("xuat").innerHTML = +amount * 23000;
+                }
+            }
+        </script>
+</body>
+</html>
